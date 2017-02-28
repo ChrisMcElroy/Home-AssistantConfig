@@ -1,0 +1,218 @@
+######################
+#      SCRIPTS       #
+######################
+
+  timed_kitchen:
+    alias: "Turn on kitchen and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+          entity_id: script.kitchen_timer_off
+      - service: switch.turn_on
+        data:
+          entity_id: switch.kitchen_lights
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.kitchen_timer_off
+
+  kitchen_timer_off:
+    alias: "Turn off Kitchen after 4 minutes"
+    sequence:
+      - delay:
+          minutes: 4
+      - service: switch.turn_off
+        data:
+          entity_id: switch.kitchen_lights
+#####################################################################
+  timed_bathroom:
+    alias: "Turn on bathroom and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+          entity_id: script.bathroom_timer_off
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bath_bright_x2
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.bathroom_timer_off
+
+  bathroom_timer_off:
+    alias: "Turn off Bathroom after 4 minutes"
+    sequence:
+      - delay:
+          minutes: 4
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.bathroom
+######################################################################
+  timed_dim_bathroom:
+    alias: "Turn on dim bathroom and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+          entity_id: script.bathroom_dim_timer_off
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bath_low_x2
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.bathroom_dim_timer_off
+
+  bathroom_dim_timer_off:
+    alias: "Turn off Bathroom Dim after 4 minutes"
+    sequence:
+      - delay:
+          minutes: 4
+      - service: homeassistant.turn_off
+        data:
+          entity_id: group.bathroom
+######################################################################
+  timed_hallway:
+    alias: "Turn on Hallway and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+          entity_id: script.hallway_timer_off
+      - service: scene.turn_on
+        data:
+          entity_id: scene.hallway
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.hallway_timer_off
+
+  hallway_timer_off:
+    alias: "Turn off Hallway after 1 minute"
+    sequence:
+      - delay:
+          minutes: 1
+      - service: light.turn_off
+        data:
+          entity_id: light.hallway
+#######################################################################
+  timed_bedroom:
+    alias: "Turn on Bed Accent and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+          entity_id: script.bedroom_off
+      - service: scene.turn_on
+        data:
+          entity_id: scene.bedroom
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.bedroom_off
+
+  bedroom_off:
+    alias: "Turn off Bedroom after 3 minutes"
+    sequence:
+      - delay:
+          minutes: 3
+      - service: switch.turn_off
+        data:
+          entity_id: switch.bed_accents
+############################################################################
+  voice_notify:
+    sequence:
+      - condition: and
+        conditions:
+          - condition: or
+            conditions:
+              - condition: state
+                entity_id: group.family
+                state: 'home'
+              - condition: state
+                entity_id: input_boolean.guest_mode
+                state: 'on'
+          - condition: or
+            conditions:
+              - condition: time
+                after: '08:00:00'
+                before: '21:00:00'
+              - condition: state
+                entity_id: input_boolean.alert_mode
+                state: 'on'
+          - condition: state
+            entity_id: input_boolean.speech_notifications
+            state: 'on'
+          - condition: template
+            value_template: >
+              {% if is_state('media_player.living_room_home', 'playing') %}
+                false
+              {% else %}
+                true
+              {% endif %}
+      - service: media_player.sonos_snapshot
+      - service: tts.amazon_polly_say
+        entity_id: group.media_players
+        data_template:
+          message: >
+            {% if now().strftime("%H")|int < 12 %}
+            "Good morning.
+            {% elif now().strftime("%H")|int < 17 %}
+            "Good afternoon.
+            {% else %}
+            "Good evening.
+            {% endif %}
+            {{ value1 }}"
+          cache: true
+      - delay:
+          seconds: 10
+      - service: media_player.sonos_restore
+
+#############################################################
+### Away
+#############################################################
+
+  away:
+    sequence:
+
+  # LOCK THE DOOR
+      - service: lock.lock
+        entity_id: lock.front_door_lock
+
+  # TURN OFF ALL LIGHTS (EXCEPT PORCH)
+      - service: homeassistant.turn_off
+        entity_id: group.interior_lights
+
+  # SEND NOTIFICATION
+      - service: notify.html5
+        data:
+          title: "Away Mode Activated"
+          message: "Everyone has left the house"
+
+###################################################
+### WE'RE BACK AT NIGHT                           #
+###################################################
+
+  arrival_after_dark:
+    sequence:
+
+  # TURN ON LIVING ROOM LIGHTS
+      - service: light.turn_on
+        entity_id: light.living_room_1
+
+      - service: light.turn_on
+        entity_id: light.living_room_2
+
+      - service: light.turn_on
+        entity_id: light.living_room_3
+
+      - service: light.turn_on
+        entity_id: light.living_room_4
+
+  # SEND NOTIFICATION
+      - service: notify.NOTIFIER_NAME
+        data:
+          title: "Welcome Home"
+          message: "Welcome home McELroy family."

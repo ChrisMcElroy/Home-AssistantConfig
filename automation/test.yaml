@@ -1,0 +1,10 @@
+  - alias: Test Notifications
+    trigger:
+      - platform: state
+        entity_id: switch.listening_room
+        to: 'on'
+    action:
+      - service: notify.html5_chris_pixel
+        data:
+          title: "Hey There"
+          message: "You're so smart!"

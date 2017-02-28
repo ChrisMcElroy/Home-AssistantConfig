@@ -1,0 +1,64 @@
+  - alias: "Media player paused/stopped"
+    trigger:
+      - platform: state
+        entity_id: media_player.kodi
+        from: 'playing'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.living_room_normal
+
+  - alias: "Media player playing"
+    trigger:
+      - platform: state
+        entity_id: media_player.kodi
+        to: 'playing'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+        service: scene.turn_on
+        entity_id: scene.living_room_dim
+
+  - alias: Harmony
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.living_room_tv
+      from: 'Select Input'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room_tv
+        data_template:
+          activity: >
+            {% if is_state("input_select.living_room_tv", "Watch TV") %}
+              24559557
+            {% elif is_state("input_select.living_room_tv", "Watch PC") %}
+              24559493
+            {% elif is_state("input_select.living_room_tv", "Security Cameras") %}
+              24559629
+            {% else %}
+            {% endif %}
+
+      - service: input_select.select_option
+        entity_id: input_select.living_room_tv
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony Off
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.living_room_tv
+      to: 'Power Off'
+    action:
+      - service: remote.turn_off
+        entity_id: remote.living_room_tv
+      - service: input_select.select_option
+        entity_id: input_select.living_room_tv
+        data_template:
+          option: "Select Input"

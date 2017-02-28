@@ -1,0 +1,14 @@
+# DETECT Home #
+  - alias: Home Mode
+    trigger:
+      - platform: state
+        entity_id: group.family
+        from: 'not_home'
+        to: 'home'
+    condition:
+      - condition: time
+        after: '18:00:00'
+        before: '22:00:00'
+    action:
+      - service: script.turn_on
+        entity_id: script.arrival_after_dark

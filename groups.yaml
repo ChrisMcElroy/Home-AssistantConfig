@@ -1,0 +1,199 @@
+####VIEWS####
+  locks_view:
+    view: yes
+    name: Locks
+    entities:
+      - group.doorlocks
+  livingroom_view:
+    view: yes
+    name: Living Room
+    entities:
+      - group.livingroom
+      - group.entertainment
+      - switch.listening_room
+      - media_player.kodi
+      - media_player.directv_rid023257546954
+      - media_player.marantz_sr7010
+  bedroom_view:
+    view: yes
+    name: Bedroom
+    entities:
+      - group.bedroom
+  bathroom_view:
+    view: yes
+    name: Bathroom
+    entities:
+      - group.bathroom
+  kitchen_view:
+    view: yes
+    name: Kitchen
+    entities:
+      - group.kitchen
+  automations_view:
+    view: yes
+    name: Automations
+    entities:
+      - automation.bathroom_on
+      - automation.chris_is_home
+      - automation.doorbell
+      - automation.goodnight_lights
+      - automation.hallway_light_on
+      - automation.harmony
+      - automation.harmony_off
+      - automation.living_room_on_at_sunset
+      - automation.mail_has_arrived
+      - automation.mark_chris_as_away
+      - automation.mark_chris_as_home
+      - automation.media_player_pausedstopped
+      - automation.media_player_playing
+      - automation.new_device_connected
+      - automation.nightlight
+      - automation.play_music_on_google_home
+      - automation.set_livingcolors_to_random_color
+      - automation.someone_at_the_door
+      - automation.turn_off_candle_warmer_at_8pm
+      - automation.turn_off_porch_light
+      - automation.turn_on_candle_warmer_at_4pm
+      - automation.turn_on_kitchen_lights_with_motion
+      - automation.turn_on_porch_light_when_sun_sets
+
+####GROUPS####
+  default_view:
+    view: yes
+    entities:
+      - group.entertainment
+      - group.interior_lights
+      - group.weather
+      - group.family
+      - group.network
+      - group.switches
+      - media_player.home
+      - media_player.living_room_home
+      - binary_sensor.bathroom_motion
+      - binary_sensor.bedroom_motion
+      - binary_sensor.hallway_motion
+      - binary_sensor.kitchen_motion
+      - binary_sensor.front_door
+      - binary_sensor.patio_door
+      - sensor.phonebatt
+
+  entertainment:
+    name: Entertainment
+    entities:
+      - input_select.living_room_tv
+      - sensor.current_activity
+
+  bedroom:
+    name: Bedroom
+    entities:
+      - light.bedroom
+      - switch.bed_accents
+
+  livingroom:
+    name: Living Room Lights
+    entities:
+      - input_select.living_room_lights
+      - light.living_room_1
+      - light.living_room_2
+      - light.living_room_3
+      - light.living_room_4
+      - light.living_room_5
+      - light.living_room_6
+      - light.bloom
+      - light.hue_lightstrip_plus_1
+
+  weather:
+    name: Weather
+    entities:
+      - sensor.6_in_1_multisensor_temperature
+      - sensor.6_in_1_multisensor_humidity
+      - sensor.aeotec_zw100_multisensor_6_temperature_16_1
+      - sensor.aeotec_zw100_multisensor_6_relative_humidity_16_5
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_precip_probability
+
+  motion:
+    - switch.bathroom_motion
+    - switch.bedroom_motion
+    - switch.kitchen
+    - switch.motion_sensor
+
+  doorlocks:
+    name: Door Locks
+    entities:
+      - lock.front_door_lock
+
+  family:
+    name: Family
+    entities:
+      - device_tracker.android76a12e1b90330861
+      - device_tracker.android4d159db5e9230bac
+#     - device_tracker.cmcelroy09_chris
+#     - device_tracker.cmcelroy09_ashli
+
+  network:
+    name: Network
+    entities:
+      - sensor.since_last_boot_templated
+      - sensor.disk_use_
+      - sensor.ha_current_version
+      - sensor.ha_installed_version
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.googlehome
+      - sensor.echo
+      - sensor.echo_dot
+      - sensor.harmonyhub
+      - sensor.mcelroydesktop
+      - sensor.philipshue
+      - sensor.printer
+      - sensor.shield
+      - sensor.sonos
+      - sensor.ubiquiti
+      - sensor.vera
+      - sensor.xbox
+
+  kitchen:
+    name: Kitchen Lights
+    entities:
+      - switch.kitchen_lights
+      - light.kitchen_bloom_1
+      - light.kitchen_bloom_2
+      - light.lightstrip
+
+  bathroom:
+    name: Bathroom Lights
+    entities:
+      - light.bathroom_1
+      - light.bathroom_2
+
+  hallway:
+    name: Hallway Lights
+    entities:
+      - light.hallway
+
+  interior_lights:
+    name: Interior Lights
+    entities:
+      - group.livingroom
+      - group.accents
+      - group.bedroom
+      - group.bathroom
+      - group.kitchen
+      - group.hallway
+
+  media_players:
+    name: Media
+    entities:
+      - media_player.living_room_home
+      - media_player.home
+
+  switches:
+    name: Switches
+    entities:
+      - switch.candle_warmer
+      - switch.wemo
+      - switch.porch_light

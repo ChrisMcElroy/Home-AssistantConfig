@@ -1,0 +1,19 @@
+  living_room_lights:
+    name: Living Room Lights
+    options:
+      - Full Brightness
+      - Read
+      - Relax
+      - All Off
+    initial: All Off
+    icon: mdi:lightbulb-on-outline
+
+  living_room_tv:
+    name: Living Room TV
+    options:
+      - Select Input
+      - Power Off
+      - Watch TV
+      - Watch PC
+      - Security Cameras
+    icon: mdi:monitor

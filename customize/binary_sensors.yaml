@@ -1,0 +1,41 @@
+  - entity_id: binary_sensor.bathroom_motion
+    friendly_name: Bathroom Motion
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: binary_sensor.bedroom_motion
+    friendly_name: 'Bedroom Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: binary_sensor.dining_room_nest_protect_online
+    friendly_name: 'Dining Room Nest Protect Online'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: binary_sensor.front_door
+    friendly_name: 'Front Door'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: binary_sensor.hallway_motion
+    friendly_name: 'Hallway Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: binary_sensor.kitchen_motion
+    friendly_name: 'Kitchen Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: binary_sensor.patio_door
+    friendly_name: 'Patio Door'
+    emulated_hue: False
+    hidden: False
+    icon:

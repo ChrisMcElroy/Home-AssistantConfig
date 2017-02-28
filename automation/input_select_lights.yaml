@@ -1,0 +1,35 @@
+  - alias: Full Brightness selected
+    trigger:
+      - platform: state
+        entity_id: input_select.living_room_lights
+        to: "Full Brightness"
+    action:
+      - service: scene.turn_on
+        entity_id: scene.full_brightness
+
+  - alias: Read selected
+    trigger:
+      - platform: state
+        entity_id: input_select.living_room_lights
+        to: "Read"
+    action:
+      - service: scene.turn_on
+        entity_id: scene.read
+
+  - alias: Relax selected
+    trigger:
+      - platform: state
+        entity_id: input_select.living_room_lights
+        to: "Relax"
+    action:
+      - service: scene.turn_on
+        entity_id: scene.relax
+
+  - alias: All Off selected
+    trigger:
+      - platform: state
+        entity_id: input_select.living_room_lights
+        to: "All Off"
+    action:
+      - service: scene.turn_on
+        entity_id: scene.all_off

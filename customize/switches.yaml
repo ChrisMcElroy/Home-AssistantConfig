@@ -1,0 +1,77 @@
+  - entity_id: switch.bathroom_motion
+    friendly_name: 'Bathroom Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.bed_accents
+    friendly_name: 'Bed Accents'
+    emulated_hue: True
+    hidden: False
+    icon: mdi:lightbulb-on
+
+  - entity_id: switch.bedroom_motion
+    friendly_name: 'Bedroom Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.candle_warmer
+    friendly_name: 'Candle Warmer'
+    emulated_hue: True
+    hidden: False
+    icon: mdi:power-plug
+
+  - entity_id: switch.doorbell
+    friendly_name: 'Doorbell'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.front_door
+    friendly_name: 'Front Door'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.hallway_motion
+    friendly_name: 'Hallway Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.kitchen_lights
+    friendly_name: 'Kitchen Lights'
+    emulated_hue: True
+    hidden: False
+    icon: mdi:lightbulb
+
+  - entity_id: switch.kitchen_motion
+    friendly_name: 'Kitchen Motion'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.listening_room
+    friendly_name: 'Listening Room'
+    emulated_hue: True
+    hidden: False
+    icon:
+
+  - entity_id: switch.patio_door
+    friendly_name: 'Patio Door'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: switch.porch_light
+    friendly_name: 'Porch Light'
+    emulated_hue: True
+    hidden: False
+    icon: mdi:lightbulb
+
+  - entity_id: switch.wemo
+    friendly_name: 'Wemo'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:power-plug

@@ -1,0 +1,37 @@
+  - alias: Alarm triggered
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.front_door
+          - binary_sensor.patio_door
+        state: 'on'
+    condition:
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
+    action:
+      - service: notify.html5
+        data_template:
+          message: >
+            {% if  states.binary_sensor.front_door.state == 'on' %}
+              The front door has just opened.
+            {% elif states.binary_sensor.patio_door.state == 'on' %}
+              The patio door has just opened.
+            {% else %}
+            {% endif %}
+
+###############################################################################
+#### UPDATE NOTIFICATION ######################################################
+###############################################################################
+  - alias: Update Available Notification
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: updater.updater
+    action:
+      - service: notify.html5
+        data:
+          title: "HomeAssistant Update"
+          message: "HomeAssistant {{ states('updater.updater') }} is now available."
+          target: "Chris_Pixel"

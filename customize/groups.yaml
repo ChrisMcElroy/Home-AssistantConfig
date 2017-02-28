@@ -1,0 +1,167 @@
+  - entity_id: group.all_automations
+    friendly_name: 'All Automations'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.all_devices
+    friendly_name: 'All Devices'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.all_lights
+    friendly_name: 'All Lights'
+    emulated_hue: True
+    hidden: True
+    icon:
+
+  - entity_id: group.all_locks
+    friendly_name: 'All Locks'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.all_remotes
+    friendly_name: 'All Remotes'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.all_scripts
+    friendly_name: 'All Scripts'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.all_switches
+    friendly_name: 'All Switches'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.automations_view
+    friendly_name: 'Automations'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.bathroom
+    friendly_name: 'Bathroom Lights'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.bathroom_view
+    friendly_name: 'Bathroom'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.bedroom
+    friendly_name: 'Bedroom'
+    emulated_hue: True
+    hidden: False
+    icon:
+
+  - entity_id: group.bedroom_view
+    friendly_name: 'Bedroom'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.default_view
+    friendly_name: 'Default View'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.doorlocks
+    friendly_name: 'Door Locks'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.entertainment
+    friendly_name: 'Entertainment'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.family
+    friendly_name: 'Family'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.hallway
+    friendly_name: 'Hallway Lights'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.interior_lights
+    friendly_name: 'Interior Lights'
+    emulated_hue: True
+    hidden: False
+    icon:
+
+  - entity_id: group.kitchen
+    friendly_name: 'Kitchen Lights'
+    emulated_hue: True
+    hidden: False
+    icon:
+
+  - entity_id: group.kitchen_view
+    friendly_name: 'Kitchen'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.livingroom
+    friendly_name: 'Living Room Lights'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.livingroom_view
+    friendly_name: 'Living Room'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.locks_view
+    friendly_name: 'Locks'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.media_players
+    friendly_name: 'Media'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.motion
+    friendly_name: 'Motion'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: group.network
+    friendly_name: 'Network'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.switches
+    friendly_name: 'Switches'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: group.weather
+    friendly_name: 'Weather'
+    emulated_hue: False
+    hidden: False
+    icon:

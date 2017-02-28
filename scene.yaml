@@ -1,0 +1,201 @@
+######################
+#      SCENES        #
+######################
+
+  - name: bath_bright_X2
+    entities:
+        light.bathroom_1:
+            state: on
+            transition: 2
+            brightness: 255
+        light.bathroom_2:
+            state: on
+            transition: 2
+            brightness: 255
+
+  - name: bath_low_x2
+    entities:
+        light.bathroom_1:
+            state: on
+            transition: 2
+            brightness: 40
+        light.bathroom_2:
+            state: on
+            transition: 2
+            brightness: 40
+
+  - name: bath_lights_off
+    entities:
+        light.bathroom_1:
+            state: off
+        light.bathroom_2:
+            state: off
+
+  - name: living_room_normal
+    entities:
+        light.living_room_1:
+            state: on
+            transition: 4
+            brightness: 78
+        light.living_room_2:
+            state: on
+            transition: 4
+            brightness: 78
+        light.living_room_3:
+            state: on
+            transition: 4
+            brightness: 78
+        light.living_room_4:
+            state: on
+            transition: 4
+            brightness: 78
+
+  - name: Living Room Dim
+    entities:
+        light.living_room_1:
+            state: off
+            transition: 4
+        light.living_room_2:
+            state: off
+            transition: 4
+        light.living_room_3:
+            state: off
+            transition: 4
+        light.living_room_4:
+            state: off
+            transition: 4
+
+  - name: Hallway
+    entities:
+        light.hallway:
+            state: on
+            transition: 1
+            brightness: 255
+
+  - name: Bedroom
+    entities:
+        switch.bed_accents:
+            state: on
+
+  - name: Goodnight
+    entities:
+        light.living_room_1:
+            state: off
+            transition: 4
+        light.living_room_2:
+            state: off
+            transition: 4
+        light.living_room_3:
+            state: off
+            transition: 4
+        light.living_room_4:
+            state: off
+            transition: 4
+        light.bloom:
+            state: off
+            transition: 4
+        light.hue_lightstrip_plus_1:
+            state: off
+        light.kitchen_bloom_1:
+            state: off
+        light.kitchen_bloom_2:
+            state: off
+        light.lightstrip:
+            state: off
+        light.bedroom:
+            state: off
+
+  - name: Chris is Home
+    entities:
+        lock.front_door_lock:
+            state: unlocked
+
+  - name: Goodbye
+    entities:
+        lock.front_door_lock:
+            state: locked
+
+  - name: Good Morning
+    entities:
+        remote.living_room_tv:
+            state: on
+
+  - name: Marti Gras Colors
+    entities:
+        light.living_room_1:
+            state: on
+            color_name: 'Gold'
+        light.living_room_2:
+            state: on
+            color_name: 'Purple'
+        light.living_room_3:
+            state: on
+            color_name: 'Green'
+        light.living_room_4:
+            state: on
+            color_name: 'Gold'
+
+  - name: Full Brightness
+    entities:
+      input_select.living_room_lights:
+        option: Full Brightness
+      light.living_room_1:
+        state: on
+        brightness: 255
+      light.living_room_2:
+        state: on
+        brightness: 255
+      light.living_room_3:
+        state: on
+        brightness: 255
+      light.living_room_4:
+        state: on
+        brightness: 255
+
+  - name: Read
+    entities:
+      input_select.living_room_lights:
+        option: Read
+      light.living_room_1:
+        state: on
+        brightness: 191
+      light.living_room_2:
+        state: on
+        brightness: 191
+      light.living_room_3:
+        state: on
+        brightness: 191
+      light.living_room_4:
+        state: on
+        brightness: 191
+
+
+  - name: Relax
+    entities:
+      input_select.living_room_lights:
+        option: Relax
+      light.living_room_1:
+        state: on
+        brightness: 76
+      light.living_room_2:
+        state: on
+        brightness: 76
+      light.living_room_3:
+        state: on
+        brightness: 76
+      light.living_room_4:
+        state: on
+        brightness: 76
+
+  - name: All Off
+    entities:
+      input_select.living_room_lights:
+        option: All Off
+      light.living_room_1:
+        state: off
+      light.living_room_2:
+        state: off
+      light.living_room_3:
+        state: off
+      light.living_room_4:
+        state: off

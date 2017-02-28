@@ -1,0 +1,167 @@
+  - entity_id: device_tracker.0006782d68e8
+    friendly_name: '0006782d68e8'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.00166ca9d278
+    friendly_name: '00166ca9d278'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.045c069978b8
+    friendly_name: '045c069978b8'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.045c069978d4
+    friendly_name: '045c069978d4'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.045c06997f04
+    friendly_name: '045c06997f04'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.60128b39e51d
+    friendly_name: '60128b39e51d'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.74c2467d6b15
+    friendly_name: 'Echo'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:amazon
+
+  - entity_id: device_tracker.802aa8538bc0
+    friendly_name: '802aa8538bc0'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.android4d159db5e9230bac
+    friendly_name: 'Chris Mcelroy'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.android76a12e1b90330861
+    friendly_name: 'Ashli Mcelroy'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.androidd91917d8db86cfb4
+    friendly_name: 'Android-D91917d8db86cfb4'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.chrissmbp
+    friendly_name: 'Chriss-Mbp'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.cmcelroy09_ashli
+    friendly_name: 'Ashli'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.cmcelroy09_chris
+    friendly_name: 'Chris'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.d052a8357691
+    friendly_name: 'D052a8357691'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.directvhr54c9ec419c
+    friendly_name: 'Directv-Hr54-C9ec419c'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.e0606609113c
+    friendly_name: 'E0606609113c'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.ec1a59cbbcd1
+    friendly_name: 'Ec1a59cbbcd1'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.googlehome
+    friendly_name: 'Google-Home'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.harmonyhub
+    friendly_name: 'Harmonyhub'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.hassbian
+    friendly_name: 'Hassbian'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.ipad
+    friendly_name: 'Ipad'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.lgwebostv
+    friendly_name: 'Lgwebostv'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.mcelroydesktop
+    friendly_name: 'Mcelroy-Desktop'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.office
+    friendly_name: 'Office'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.philipshue
+    friendly_name: 'Philips-Hue'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: device_tracker.raspberrypi
+    friendly_name: 'Raspberrypi'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: device_tracker.sonoszp
+    friendly_name: 'Sonoszp'
+    emulated_hue: False
+    hidden: True
+    icon:

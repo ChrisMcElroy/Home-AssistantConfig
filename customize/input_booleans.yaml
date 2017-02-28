@@ -1,0 +1,23 @@
+  - entity_id: input_boolean.alert_mode
+    friendly_name: 'Alert Mode'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:alert-octagram
+
+  - entity_id: input_boolean.guest_mode
+    friendly_name: 'Guest Mode'
+    emulated_hue: True
+    hidden: False
+    icon: mdi:account-alert
+
+  - entity_id: input_boolean.loop_livingcolors
+    friendly_name: 'Loop Livingcolors'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:spotlight
+
+  - entity_id: input_boolean.speech_notifications
+    friendly_name: 'Speech Notifications'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:speaker-wireless

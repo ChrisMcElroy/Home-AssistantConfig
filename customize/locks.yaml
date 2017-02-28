@@ -1,0 +1,5 @@
+  - entity_id: lock.front_door_lock
+    friendly_name: 'Front Door Lock'
+    emulated_hue: False
+    hidden: False
+    icon:

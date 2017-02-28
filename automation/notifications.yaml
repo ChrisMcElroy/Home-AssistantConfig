@@ -1,0 +1,56 @@
+# TAKE OUT THE TRASH #
+  - alias: Take out the trash
+    hide_entity: True
+    trigger:
+      - platform: time
+        after: "19:00:00"
+    condition:
+      - condition: time
+        weekday:
+          - thu
+    action:
+      - service: script.voice_notify
+        data_template:
+          value1: "Don't forget to take out the trash"
+
+# DOORBELL #
+  - alias: 'Doorbell'
+    trigger:
+      platform: state
+      entity_id: switch.doorbell
+      to: 'on'
+    condition:
+      - condition: time
+        after: '9:00:00'
+        before: '20:00:00'
+    action:
+      service: tts.google_say
+      entity_id: group.media_players
+      data:
+        message: 'Someone is at the door'
+
+  - alias: 'Someone at the Door'
+    trigger:
+      platform: state
+      entity_id: switch.doorbell
+      to: 'on'
+    condition:
+      condition: state
+      entity_id: device_tracker.android4d159db5e9230bac
+      state: 'home'
+    action:
+      service: remote.turn_on
+      entity_id: remote.living_room_tv
+      data:
+        activity: 24559629
+
+# NEW DEVICE ON NETWORK #
+  - alias: 'New device connected'
+    trigger:
+      platform: event
+      event_type: device_tracker_new_device
+    action:
+      service: tts.google_say
+      entity_id: media_player.living_room_home
+      data:
+        message: 'There has been a new device detected on the network'

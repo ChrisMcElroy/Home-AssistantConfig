@@ -1,0 +1,13 @@
+# NIGHTSTAND LIGHT ON #
+  - alias: Goodnight Lights
+    trigger:
+      - platform: state
+        entity_id: group.livingroom
+        to: 'off'
+    condition:
+      - condition: time
+        after: '21:01:00'
+        before: '07:59:00'
+    action:
+      - service: light.turn_on
+        entity_id: light.bedroom

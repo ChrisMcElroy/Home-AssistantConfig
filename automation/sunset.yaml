@@ -1,0 +1,57 @@
+# PORCH LIGHT ON #
+  - alias: Turn on porch light when sun sets
+    trigger:
+      - platform: sun
+        event: sunset
+    action:
+      - service: switch.turn_on
+        entity_id: switch.porch_light
+      - service: script.voice_notify
+        data_template:
+          value1: >
+            {{ [
+            "It is pretty dark outside.  I will turn on the outside lights now.",
+            "It's a little past Sunset. Time to turn on the outside lights. I'm on it.",
+            "I'll switch on the outside lights.  It's getting dark outside.",
+            "Time to turn on the outside lights. I'll take care of it."
+            ] | random }}
+
+# PORCH LIGHT OFF #
+  - alias: Turn off porch light
+    trigger:
+      - platform: time
+        after: '22:15:00'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.porch_light
+
+# LIVING ROOM ON #
+  - alias: 'Lights on at Sunset'
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-00:15:00"
+    condition:
+      condition: state
+      entity_id: group.family
+      state: home
+    action:
+      - service: light.turn_on
+        entity_id:
+          - light.living_room_1
+          - light.living_room_2
+          - light.living_room_3
+          - light.living_room_4
+          - light.bloom
+          - light.lightstrip
+          - light.kitchen_bloom_1
+          - light.kitchen_bloom_2
+      - service: script.voice_notify
+        data_template:
+          value1: >
+            {{ [
+            "It is starting to get dark in here.  I will turn on some lights.",
+            "It's almost Sunset. Time to turn on some lights. I'm on it.",
+            "I read you're mind.  Turning lights on now.",
+            "Time to turn on the living room lights. I'll take care of it."
+            ] | random }}

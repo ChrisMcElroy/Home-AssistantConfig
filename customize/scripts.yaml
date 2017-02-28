@@ -1,0 +1,71 @@
+  - entity_id: script.away
+    friendly_name: 'Away'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.bathroom_dim_timer_off
+    friendly_name: 'Turn Off Bathroom Dim After 4 Minutes'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.bathroom_timer_off
+    friendly_name: 'Turn Off Bathroom After 4 Minutes'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.bedroom_off
+    friendly_name: 'Turn Off Bedroom After 3 Minutes'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.hallway_timer_off
+    friendly_name: 'Turn Off Hallway After 1 Minute'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.kitchen_timer_off
+    friendly_name: 'Turn Off Kitchen After 4 Minutes'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.timed_bathroom
+    friendly_name: 'Turn On Bathroom And Set Timer'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.timed_bedroom
+    friendly_name: 'Turn On Bed Accent And Set Timer'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.timed_dim_bathroom
+    friendly_name: 'Turn On Dim Bathroom And Set Timer'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.timed_hallway
+    friendly_name: 'Turn On Hallway And Set Timer'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.timed_kitchen
+    friendly_name: 'Turn On Kitchen And Set Timer'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: script.voice_notify
+    friendly_name: 'Voice Notify'
+    emulated_hue: False
+    hidden: True
+    icon:

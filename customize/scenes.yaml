@@ -1,0 +1,71 @@
+  - entity_id: scene.bath_bright_x2
+    friendly_name: 'Bath Bright X2'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.bath_lights_off
+    friendly_name: 'Bath Lights Off'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.bath_low_x2
+    friendly_name: 'Bath Low X2'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.bedroom
+    friendly_name: 'Bedroom'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.chris_is_home
+    friendly_name: 'Chris Is Home'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.good_morning
+    friendly_name: 'Good Morning'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.goodbye
+    friendly_name: 'Goodbye'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.goodnight
+    friendly_name: 'Goodnight'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.hallway
+    friendly_name: 'Hallway'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.living_room_dim
+    friendly_name: 'Living Room Dim'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.living_room_normal
+    friendly_name: 'Living Room Normal'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: scene.marti_gras_colors
+    friendly_name: 'Marti Gras Colors'
+    emulated_hue: True
+    hidden: False
+    icon:

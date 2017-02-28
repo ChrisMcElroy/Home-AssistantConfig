@@ -1,0 +1,221 @@
+  - entity_id: sensor.6_in_1_multisensor_humidity
+    friendly_name: 'Bedroom Humidity'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:water-percent
+
+  - entity_id: sensor.6_in_1_multisensor_light
+    friendly_name: '6 In 1 Multisensor (Light)'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: sensor.6_in_1_multisensor_temperature
+    friendly_name: 'Bedroom Temp'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:thermometer
+
+  - entity_id: sensor.current_activity
+    friendly_name: 'Current Activity'
+    emulated_hue: False
+    hidden: False
+    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+
+  - entity_id: sensor.dark_sky_cloud_coverage
+    friendly_name: 'Cloud Coverage'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:weather-partlycloudy
+
+  - entity_id: sensor.dark_sky_daily_high_temperature
+    friendly_name: 'High'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:thermometer
+
+  - entity_id: sensor.dark_sky_daily_low_temperature
+    friendly_name: 'Low'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:thermometer
+
+  - entity_id: sensor.dark_sky_icon
+    friendly_name: 'Dark Sky Icon'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: sensor.dark_sky_precip_intensity
+    friendly_name: 'Rain Gauge'
+    emulated_hue: False
+    hidden: True
+    icon: mdi:weather-rainy
+
+  - entity_id: sensor.dark_sky_precip_probability
+    friendly_name: 'Chance Of Precipitation'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:water-percent
+
+  - entity_id: sensor.dark_sky_summary
+    friendly_name: 'Forecast'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: sensor.dark_sky_temperature
+    friendly_name: 'Current'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:thermometer
+
+  - entity_id: sensor.dining_room_nest_protect_battery_health
+    friendly_name: 'Dining Room Nest Protect Battery Health'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: sensor.dining_room_nest_protect_co_status
+    friendly_name: 'Dining Room Nest Protect Co Status'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: sensor.dining_room_nest_protect_smoke_status
+    friendly_name: 'Dining Room Nest Protect Smoke Status'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: sensor.disk_use_
+    friendly_name: 'Disk Use'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:harddisk
+
+  - entity_id: sensor.googlehome
+    friendly_name: 'Google Home'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:google
+
+  - entity_id: sensor.ha_current_version
+    friendly_name: 'Ha Current Version'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: sensor.ha_installed_version
+    friendly_name: 'Ha Installed Version'
+    emulated_hue: False
+    hidden: False
+    icon:
+
+  - entity_id: sensor.harmonyhub
+    friendly_name: 'Harmony Hub'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:remote
+
+  - entity_id: sensor.mcelroydesktop
+    friendly_name: 'Htpc'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:keyboard
+
+  - entity_id: sensor.philipshue
+    friendly_name: 'Hue Hub'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:router-wireless
+
+  - entity_id: sensor.phonebatt
+    friendly_name: 'Phone Battery'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:watch
+
+  - entity_id: sensor.printer
+    friendly_name: 'Printer'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:printer
+
+  - entity_id: sensor.shield
+    friendly_name: 'Shield'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:android
+
+  - entity_id: sensor.since_last_boot
+    friendly_name: 'Since Last Boot'
+    emulated_hue: False
+    hidden: True
+    icon: mdi:clock
+
+  - entity_id: sensor.since_last_boot_templated
+    friendly_name: 'Uptime'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:clock
+
+  - entity_id: sensor.sonos
+    friendly_name: 'Sonos'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:music-note
+
+  - entity_id: sensor.speedtest_download
+    friendly_name: 'Download'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:speedometer
+
+  - entity_id: sensor.speedtest_ping
+    friendly_name: 'Speedtest Ping'
+    emulated_hue: False
+    hidden: True
+    icon:
+
+  - entity_id: sensor.speedtest_upload
+    friendly_name: 'Speedtest Upload'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:speedometer
+
+  - entity_id: sensor.ubiquiti
+    friendly_name: 'Ubiquiti Ap'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:router-wireless
+
+  - entity_id: sensor.vera
+    friendly_name: 'Vera'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:router-wireless
+
+  - entity_id: sensor.xbox
+    friendly_name: 'Xbox One'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:xbox
+
+  - entity_id: sensor.echo
+    friendly_name: 'Echo'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:amazon
+
+  - entity_id: sensor.echo_dot
+    friendly_name: 'Echo Dot'
+    emulated_hue: False
+    hidden: False
+    icon: mdi:amazon
+
+  - entity_id: sensor.yr_symbol
+    friendly_name: 'Yr Symbol'
+    emulated_hue: False
+    hidden: True
+    icon:

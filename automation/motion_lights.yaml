@@ -1,0 +1,69 @@
+# KITCHEN ON WITH MOTION #
+  - alias: Turn on kitchen lights with motion
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.kitchen_motion
+        to: 'on'
+    action:
+      service: homeassistant.turn_on
+      entity_id: script.timed_kitchen
+
+# BATHROOM ON WITH MOTION DURING DAY #
+  - alias: Bathroom On
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.bathroom_motion
+        to: 'on'
+    condition:
+      - condition: time
+        after: '08:00:00'
+        before: '21:00:00'
+    action:
+      service: homeassistant.turn_on
+      entity_id: script.timed_bathroom
+
+# BATHROOM ON WITH MOTION DURING NIGHT #
+  - alias: Nightlight
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.bathroom_motion
+        to: 'on'
+    condition:
+      - condition: time
+        after: '21:01:00'
+        before: '07:59:00'
+    action:
+      - service: homeassistant.turn_on
+        entity_id: script.timed_dim_bathroom
+
+# HALLWAY LIGHTS ON WITH MOTION #
+  - alias: Hallway Light On
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: switch.hallway_motion
+        to: 'on'
+    condition:
+      - condition: time
+        after: '17:30:00'
+        before: '08:00:00'
+    action:
+      - service: script.turn_on
+        entity_id: script.timed_hallway
+
+# BEDROOM NIGHTLIGHT ON WITH MOTION #
+  - alias: Bedroom Nightlight
+    trigger:
+      - platform: state
+        entity_id: switch.bedroom_motion
+        to: 'on'
+    condition:
+      - condition: time
+        after: '23:00:00'
+        before: '06:35:00'
+    action:
+      - service: homeassistant.turn_on
+        entity_id: script.timed_bedroom

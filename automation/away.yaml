@@ -1,0 +1,27 @@
+# DETECT AWAY #
+  - alias: Away Mode
+    trigger:
+      - platform: state
+        entity_id: group.family
+        from: 'home'
+        to: 'not_home'
+        for:
+          minutes: 5
+    action:
+      - service: script.turn_on
+        entity_id: script.away
+
+# CANCEL AWAY IF WE RETURN #
+  - alias: Away Mode Cancel
+    trigger:
+      - platform: state
+        entity_id: group.family
+        from: 'not_home'
+        to: 'home'
+    condition:
+      - condition: state
+        entity_id: script.away
+        state: 'on'
+    action:
+      - service: script.turn_off
+        entity_id: script.away

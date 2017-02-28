@@ -1,0 +1,120 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 240
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include_dir_merge_list customize
+
+frontend:
+
+http:
+  base_url: !secret http_base_url
+  api_password: !secret http_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
+######### CERTIFICATE RECEIVED ON 2/23/2017
+######### RENEW ON 5/23/2017
+
+#mqtt:
+  #broker: 192.168.1.38
+  #port: 1883
+  #client_id: home-assistant-1
+  #keepalive: 60
+  #username: !secret mqtt_user
+  #password: !secret mqtt_password
+
+remote:
+  - platform: harmony
+    name: Living Room TV
+    username: !secret remote_username
+    password: !secret remote_password
+    host: 192.168.1.17
+    port: 5222
+    activity: Watch TV
+
+emulated_hue:
+  host_ip: 192.168.1.38
+  listen_port: 8300
+  expose_by_default: false
+
+updater:
+discovery:
+conversation:
+history:
+sun:
+recorder:
+  purge_days: 2
+  exclude:
+    entities:
+      - sun.sun
+logger:
+  default: error
+
+logbook:
+  exclude:
+    entities:
+      - binary_sensor.bathroom_motion
+      - binary_sensor.bedroom_motion
+      - binary_sensor.hallway_motion
+      - binary_sensor.kitchen_motion
+      - sensor.disk_use_
+      - sensor.since_last_boot
+      - sensor.since_last_boot_templated
+      - automation.turn_on_kitchen_lights_with_motion
+      - automation.bathroom_on
+      - automation.nightlight
+      - automation.bedroom_nightlight
+      - automation.hallway_light_on
+
+tts:
+  - platform: google
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_ID
+    aws_secret_access_key: !secret aws_secret_access_key
+    region_name: 'us-east-1'
+
+#remote:
+  #- platform: harmony
+    #name: Living Room TV
+    #username: !secret remote_username
+    #password: !secret remote_password
+    #host: 192.168.1.25
+    #port: 5222
+    #activity: Watch TV
+
+notify:
+  #- name: NOTIFIER_NAME
+    #platform: pushbullet
+    #api_key: !secret notify_api_key
+  - platform: html5
+    name: html5
+    gcm_api_key: !secret gcm_api_key
+    gcm_sender_id: !secret gcm_sender_id
+
+vera:
+  vera_controller_url: http://192.168.1.3:3480/
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+###################################################
+#                                                 #
+#                   Includes                      #
+#                                                 #
+###################################################
+automation: !include_dir_merge_list automation
+device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+scene: !include scene.yaml
+script: !include script.yaml
+sensor: !include_dir_merge_list sensor
+

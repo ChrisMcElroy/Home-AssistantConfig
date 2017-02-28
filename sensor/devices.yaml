@@ -1,0 +1,49 @@
+  - platform: template
+    sensors:
+      printer:
+        friendly_name: 'Printer'
+        value_template: "{{ 'Online' if is_state('device_tracker.60128b39e51d', 'home') else 'Offline' }}"
+
+      harmonyhub:
+        friendly_name: 'Harmony Hub'
+        value_template: "{{ 'Online' if is_state('device_tracker.harmonyhub', 'home') else 'Offline' }}"
+
+      mcelroydesktop:
+        friendly_name: 'HTPC'
+        value_template: "{{ 'Online' if is_state('device_tracker.mcelroydesktop', 'home') else 'Offline' }}"
+
+      philipshue:
+        friendly_name: 'Hue Hub'
+        value_template: "{{ 'Online' if is_state('device_tracker.phillipshue', 'home') else 'Offline' }}"
+
+      ubiquiti:
+        friendly_name: 'Ubiquiti AP'
+        value_template: "{{ 'Online' if is_state('device_tracker.802aa8538bc0', 'home') else 'Offline' }}"
+
+      googlehome:
+        friendly_name: 'Google Home'
+        value_template: "{{ 'Online' if is_state('device_tracker.googlehome', 'home') else 'Offline' }}"
+
+      echo:
+        friendly_name: 'Echo'
+        value_template: "{{ 'Online' if is_state('device_tracker.74c2467d6b15', 'home') else 'Offline' }}"
+
+      echo_dot:
+        friendly_name: 'Echo Dot'
+        value_template: "{{ 'Online' if is_state('device_tracker.kindle7dc57094f', 'home') else 'Offline' }}"
+
+      sonos:
+        friendly_name: 'Sonos'
+        value_template: "{{ 'Online' if is_state('device_tracker.sonoszp', 'home') else 'Offline' }}"
+
+      vera:
+        friendly_name: 'Vera'
+        value_template: "{{ 'Online' if is_state('device_tracker.e0606609113c', 'home') else 'Offline' }}"
+
+      shield:
+        friendly_name: 'Shield'
+        value_template: "{{ 'Online' if is_state('device_tracker.androidd91917d8db86cfb4', 'home') else 'Offline' }}"
+
+      xbox:
+        friendly_name: 'Xbox One'
+        value_template: "{{ 'Online' if is_state('device_tracker.xboxone', 'home') else 'Offline' }}"

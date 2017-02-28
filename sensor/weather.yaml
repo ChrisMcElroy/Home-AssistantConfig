@@ -1,0 +1,13 @@
+  - platform: yr
+
+  - platform: darksky
+    api_key: 12cec38fb593b32a6d475d9c056748e3
+    monitored_conditions:
+      - icon
+      - summary
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - temperature_max
+      - temperature_min
+      - cloud_cover
